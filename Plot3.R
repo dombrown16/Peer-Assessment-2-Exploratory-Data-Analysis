@@ -11,6 +11,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 
 library(plyr)
 library(ggplot2)
+
 # Group and Sum the Emission data by year:
 NEI_Baltimore<-NEI[NEI$fips==24510,]
 Baltimore_emissions_by_year<-aggregate(Emissions ~ year + type,

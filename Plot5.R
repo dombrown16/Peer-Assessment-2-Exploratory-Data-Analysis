@@ -6,7 +6,6 @@
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
-# create subset of Baltimore City, Maryland Data (fips == "24510"):
 BA <- NEI[(NEI$fips == "24510"),]
 
 total <- aggregate(Emissions ~ year + type, data = BA, sum)
